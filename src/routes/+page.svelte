@@ -1,17 +1,28 @@
 <script>
 	import Jumper from '../components/Jumper.svelte';
 
+	const colorOptions = [
+		'#f94144',
+		'#f3722c',
+		'#f8961e',
+		'#f9c74f',
+		'#90be6d',
+		'#43aa8b',
+		'#577590'
+	];
+	let color = colorOptions[Math.floor(Math.random() * colorOptions.length)];
+
 	let innerHeight = 0;
 	let innerWidth = 0;
 
 	$: size = 1.5 * Math.max(innerHeight, innerWidth);
-	$: duration = Math.floor(size) * 2;
+	$: duration = Math.floor(size) * 4;
 </script>
 
 <svelte:window bind:innerHeight bind:innerWidth />
 
 <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden">
-	<Jumper {size} color="#ff9b51" {duration} />
+	<Jumper {size} {color} {duration} />
 </div>
 <div class="absolute w-full h-full py-5 z-10  flex justify-center">
 	<div class="h-full flex flex-col justify-between overflow-hidden">
