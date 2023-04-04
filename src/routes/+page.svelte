@@ -24,8 +24,8 @@
 <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden">
 	<Jumper {size} {color} {duration} />
 </div>
-<div class="absolute w-full h-full py-5 z-10  flex justify-center">
-	<div class="h-full flex flex-col justify-between overflow-hidden">
+<div class="absolute z-10 flex h-full w-full  justify-center py-5">
+	<div class="flex h-full flex-col justify-between overflow-hidden">
 		<p>diese Seite ist noch im Aufbau</p>
 		<p>schau doch später nochmal vorbei</p>
 	</div>

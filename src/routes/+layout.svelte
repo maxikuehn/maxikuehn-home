@@ -7,40 +7,22 @@
 </script>
 
 <div
+	id="app"
+	class="absolute left-0 top-0 h-full w-full cursor-none overflow-hidden bg-black"
 	on:mousemove={(e) => coords.set({ x: e.clientX, y: e.clientY })}
-	on:mouseenter={() => {
-		size.set(10);
-	}}
+	on:mouseenter={() => size.set(12)}
 	on:mouseleave={() => size.set(0)}
 >
 	<slot />
 </div>
-<svg>
-	<circle cx={$coords.x} cy={$coords.y} r={$size} />
+<svg class="absolute h-full w-full">
+	<circle
+		class="ease transition-[r] duration-200"
+		cx={$coords.x}
+		cy={$coords.y}
+		r={$size}
+		fill="none"
+		stroke="white"
+		stroke-width={5}
+	/>
 </svg>
-
-<style>
-	div {
-		position: absolute;
-		overflow: hidden;
-		width: 100%;
-		height: 100%;
-		background: #000;
-		cursor: none;
-		/* border: 1px solid red; */
-	}
-	svg {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-	}
-	circle {
-		fill: none;
-	}
-	@media (hover: hover) and (pointer: fine) {
-		circle {
-			stroke: #000;
-			stroke-width: 4;
-		}
-	}
-</style>
