@@ -9,8 +9,10 @@
 <div
 	id="app"
 	class="absolute left-0 top-0 h-full w-full cursor-none overflow-hidden bg-black"
-	on:mousemove={(e) => coords.set({ x: e.clientX, y: e.clientY })}
-	on:mouseenter={() => size.set(12)}
+	on:mousemove={(e) => {
+		coords.set({ x: e.clientX, y: e.clientY });
+		size.set(12);
+	}}
 	on:mouseleave={() => size.set(0)}
 >
 	<slot />
