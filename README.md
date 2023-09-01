@@ -11,7 +11,7 @@
   </a>
 
   <p align="center">
-    <a href="https://maxikuehn.de">Visit Site</a>
+    <a href="https://milana-ohlinger.de">Visit Site</a>
     ·
     <a href="https://github.com/maxikuehn/maxikuehn.de/issues">Report Bug</a>
     ·
