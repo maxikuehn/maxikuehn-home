@@ -1,7 +1,7 @@
 <script>
 	import Jumper from '../components/Jumper.svelte';
 
-	const colorOptions = ['#FF577F', '#FFD384', '#FFC7EA'];
+	const colorOptions = ['#FF577F', '#FFD384', '#FFC7EA', '#D4AF37'];
 	let color = colorOptions[Math.floor(Math.random() * colorOptions.length)];
 
 	let innerHeight = 0;
