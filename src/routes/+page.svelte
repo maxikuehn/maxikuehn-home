@@ -1,15 +1,7 @@
 <script>
 	import Jumper from '../components/Jumper.svelte';
 
-	const colorOptions = [
-		'#f94144',
-		'#f3722c',
-		'#f8961e',
-		'#f9c74f',
-		'#90be6d',
-		'#43aa8b',
-		'#577590'
-	];
+	const colorOptions = ['#FF577F', '#FFD384', '#FFC7EA'];
 	let color = colorOptions[Math.floor(Math.random() * colorOptions.length)];
 
 	let innerHeight = 0;
@@ -24,7 +16,7 @@
 <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden">
 	<Jumper {size} {color} {duration} />
 </div>
-<div class="absolute z-10 flex h-full w-full  justify-center py-5">
+<div class="absolute z-10 flex h-full w-full justify-center py-5">
 	<div class="flex h-full flex-col justify-between overflow-hidden">
 		<p>diese Seite ist noch im Aufbau</p>
 		<p>schau doch später nochmal vorbei</p>
